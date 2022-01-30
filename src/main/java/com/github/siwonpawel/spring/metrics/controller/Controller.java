@@ -18,7 +18,7 @@ public class Controller {
     @Timed
     @GetMapping("/atomic")
     public String atomic() {
-        return String.format("Hello World! It's %d access since running this app!", atomic.incrementAndGet());
+        return String.format("Hello World! It's %d access since running this app!", atomicCounter.incrementAndGet());
     }
 
     @Timed
