@@ -19,5 +19,6 @@ Serivces are available:
 ### Post-run steps
 
 Grafana needs to be connected to Prometheus datasource in settings.  
+> http://prometheus:9090  
 
 Have fun and play with it! :)
