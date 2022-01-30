@@ -18,14 +18,13 @@ public class Controller {
     @Timed
     @GetMapping("/atomic")
     public String atomic() {
-        adderCounter.add(1);
-        return String.format("Hello World! It's %d access since running this app!", adderCounter.sum());
+        return String.format("Hello World! It's %d access since running this app!", atomic.incrementAndGet());
     }
 
     @Timed
     @GetMapping("/adder")
     public String adder() {
         adderCounter.add(1);
-        return String.format("Hello World! It's %d access since running this app!", atomicCounter.incrementAndGet());
+        return String.format("Hello World! It's %d access since running this app!", adderCounter.sum());
     }
 }
